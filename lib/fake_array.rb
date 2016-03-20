@@ -1,7 +1,16 @@
+require 'pry'
 class FakeArray
 
-  # you'll need a splat in this class somewhere
+def self.initialize(*values)
+  fa = []
+  values.each do |value|
+    fa << value
+  end
+  return fa
+end
 
-
+def self.new(*values)
+  self.initialize(*values)
+end
 
 end
